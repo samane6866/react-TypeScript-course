@@ -10,7 +10,7 @@ function App() {
     <>
       <div>
         <h1>Hello world</h1>
-        <Button color="secondary" onClick={()=>console.log("I just clicked")}>My blue button</Button>
+        <Button color="primary" onClick={()=>console.log("I just clicked")}>My blue button</Button>
       </div>
      
     </>

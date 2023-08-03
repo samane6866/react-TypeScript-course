@@ -2,16 +2,16 @@
 
 interface Props {
     
-    children: string
-    color?: "secondary" | "primary" | "danger";
+    children: string;
+    color? : "primary" | "secondary" | "danger";
     onClick: () => void;
 
 }
 
-function Button({children,onClick,color}:Props) {
+function Button({children, onClick, color="primary"}:Props) {
 return (
         <>
-        <button type="button" className={"btn btn"+ color} onClick={onClick}>{children}</button>
+        <button className={"btn btn-" + color} onClick={onClick}>{children}</button>
 
         </>
     
