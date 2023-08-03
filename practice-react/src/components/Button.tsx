@@ -1,5 +1,7 @@
 // we define interface to define de shape of our props
 
+
+
 interface Props {
     
     children: string;
@@ -8,7 +10,9 @@ interface Props {
 
 }
 
-function Button({children, onClick, color="primary"}:Props) {
+function Button({ children, onClick, color = "primary" }: Props) {
+    
+    
 return (
         <>
         <button className={"btn btn-" + color} onClick={onClick}>{children}</button>
