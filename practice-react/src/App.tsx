@@ -2,6 +2,7 @@ import Alarm from './components/Alarm'
 import './App.css'
 import Button from './components/Button'
 import { useState } from 'react'
+import Card from './components/Card'
 
 function App() {
   // 1> we need useState to visibility of alart,we will render the Alert only when is true, so we need to use state hook:
@@ -16,7 +17,7 @@ function App() {
         <h1>Hello world</h1>
         { alertVisibility &&<Alarm onClose={()=>setAlertVisibility(false)}>My Alert</Alarm>}
         <Button color="primary" onClick={() => setAlertVisibility(true)}>My blue button</Button>
-        
+        <Card/>
       </div>
      
     </>
