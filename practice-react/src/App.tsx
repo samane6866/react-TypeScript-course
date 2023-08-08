@@ -10,12 +10,14 @@ function App() {
   // 2> we want to display alert only when alertvisibility is true
   // 3> we use &&(conditional and) and {} to aske like this;(is alertvisibility true?)so if is true will show Alarm component.
  
-   const [alertVisibility, setAlertVisibility]=useState(false)
+  const [alertVisibility, setAlertVisibility] = useState(false)
+  
+  
 
   return (
     <>
       <div>
-        <Like onClick={()=>console.log("i just clicked")}></Like>
+        <Like onClick={()=>console.log("clickeeed")}></Like>
         <h1>Hello world</h1>
         { alertVisibility &&<Alarm onClose={()=>setAlertVisibility(false)}>My Alert</Alarm>}
         <Button color="primary" onClick={() => setAlertVisibility(true)}>My blue button</Button>
