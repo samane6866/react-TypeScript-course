@@ -24,3 +24,7 @@ function Like({onClick}:Props) {
 }
 
 export default Like;
+
+
+// the other way to this exercise could be through if conditional and and add other icon with diffrent color, in case that if is false show else; example : if (status) return <iconHeartRED oncliCk={handelTogel}/>
+// return <iconHeartWhite onClicke={handelTogel}/>
