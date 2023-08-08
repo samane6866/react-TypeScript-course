@@ -1,11 +1,15 @@
 import {BsHeart} from "react-icons/bs";
 
+interface likeComponent{
+    onClick:
+}
+
 function Like() {
     
     return (
         <>
-            <BsHeart size= "40"/>
-        </>
+            <BsHeart size= "40" />
+        </> 
 
 
     )
