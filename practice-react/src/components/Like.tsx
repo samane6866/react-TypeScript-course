@@ -1,10 +1,10 @@
 import {BsHeart} from "react-icons/bs";
 
-interface likeComponent{
-    onClick:
+interface Props{
+    onClick: () => void;
 }
 
-function Like() {
+function Like({onClick,}:Props) {
     
     return (
         <>

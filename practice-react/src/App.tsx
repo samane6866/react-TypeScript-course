@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div>
-        <Like></Like>
+        <Like onClick={()=>console.log("i just clicked")}></Like>
         <h1>Hello world</h1>
         { alertVisibility &&<Alarm onClose={()=>setAlertVisibility(false)}>My Alert</Alarm>}
         <Button color="primary" onClick={() => setAlertVisibility(true)}>My blue button</Button>

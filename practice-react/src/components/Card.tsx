@@ -18,7 +18,7 @@ interface CardProps {
   function Card() {
     return (
       <>
-        <BoxCard backgroundColor="" textColor="yellow" borderColor="green">
+        <BoxCard backgroundColor="blue" textColor="yellow" borderColor="green">
           HOLA
         </BoxCard>
       </>
