@@ -1,11 +1,12 @@
 import Alarm from './components/Alarm'
 import './App.css'
 import Button from './components/Button'
-import { useState } from 'react'
+import { Children, useState } from 'react'
 import Card from './components/Card'
 import Like from "./components/Like"
 import NavBar from './components/NavBar'
 import ShopCart from './components/ShopCart'
+import ExpandableText from './ExpandableText'
 
 function App() {
   // 1> we need useState to visibility of alart,we will render the Alert only when is true, so we need to use state hook:
@@ -47,8 +48,8 @@ function App() {
   const [shop, setShop] = useState({ discount: 1, items: [{ id: 1, title: "product1", quantity: 1 }, { id: 2, title: "product2", quantity: 1 }] });
   
 
-  const handleShop = () => {
-     setShop({ ...shop, items: shop.items.map(i => i.id === 1 ? { ...i, quantity: 2 } : i) })
+  // const handleShop = () => {
+  //    setShop({ ...shop, items: shop.items.map(i => i.id === 1 ? { ...i, quantity: 2 } : i) })
     
     
     // removing title
@@ -60,6 +61,7 @@ function App() {
   return (
     <>
       <div>
+        <ExpandableText maxChars={10}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fuga inventore a molestias dolorem ex, sint similique doloremque dignissimos quos in, esse vel quaerat voluptates culpa magni illo. Nihil eum similique ducimus obcaecati. Corporis dolorum perspiciatis nihil nesciunt quas reiciendis culpa, voluptatem quia nam! Enim illum molestiae ut temporibus mollitia exercitationem, tempore officiis! Maiores facilis nam ipsa, a et, obcaecati fuga voluptas maxime ducimus blanditiis dolore architecto aspernatur laboriosam perferendis qui quas laudantium. Excepturi, quasi blanditiis aspernatur veritatis atque architecto dolore perferendis id eligendi deleniti laudantium accusamus obcaecati unde quo vitae assumenda voluptate dolorum illo! Corrupti quas explicabo ut ullam.</ExpandableText>
         <div >
           
       <h1>Game</h1>
