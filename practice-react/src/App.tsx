@@ -18,19 +18,63 @@ function App() {
 
   const [cartItems, setCartItems] = useState(["product1", "product2"]);
   
+  // in this exercise game we want update the value of property of player ,name that now is john and we want update that to Bob, so for that we are using spread method to expand our object, the way that i did the exercise is working fine for this case exactly,but if in future i add new property to player i should to write again thoes property,i will write other sloution in comment in case that we add new property at game in future
+  const [game, setGame] = useState({
+    id: 1,
+    player: {
+      name:"John"
+    },
+  })
+  const handleClick = () => {
+    setGame({ ...game, player: { name: "Bob" } })
+    
+    // setGame({...game,player:{...game.player,name:"Bob"}})
+    
+  }
+
+  const [pizza, setPizza] = useState({
+    name: "Spicy pepperoni",
+    topping:["Mushroom"]
+  })
+
+  const handlePizza = () => {
+    
+    setPizza({ ...pizza, topping: [...pizza.topping, "cheese"] })
+  }
+
+
+  // update an array of object
+  const [shop, setShop] = useState({ discount: 1, items: [{ id: 1, title: "product1", quantity: 1 }, { id: 2, title: "product2", quantity: 1 }] });
   
 
+  const handleShop = () => {
+     setShop({ ...shop, items: shop.items.map(i => i.id === 1 ? { ...i, quantity: 2 } : i) })
+    
+    
+    // removing title
+  //   setShop({...shop,items:shop.items.filter(item => item.title !== "product1") })
+  // }
+
+  
+ 
   return (
     <>
       <div>
+        <div >
+          
+      <h1>Game</h1>
+      <p>Player Name: {game.player.name}</p>
+      <button onClick={handleClick}>Change Player Name</button>
+        </div>
+        
+        <div>
+      <h1>pizza</h1>
+      <p>add a topping to your{ pizza.name} : {pizza.topping}</p>
+      <button onClick={handlePizza}>add more topping to your pizza</button>
+    </div>
 
         <NavBar itemCartCount={cartItems.length}></NavBar>
-
         <ShopCart  cartItems={cartItems} onClear={()=> setCartItems([])}></ShopCart>
-
-
-
-
         <Like onClick={()=>console.log("clickeeed")}></Like>
         <h1>Hello world</h1>
         { alertVisibility &&<Alarm onClose={()=>setAlertVisibility(false)}>My Alert</Alarm>}
