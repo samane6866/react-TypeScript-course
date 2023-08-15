@@ -7,6 +7,7 @@ import Like from "./components/Like"
 import NavBar from './components/NavBar'
 import ShopCart from './components/ShopCart'
 import ExpandableText from './ExpandableText'
+import Form from './components/Form'
 
 function App() {
   // 1> we need useState to visibility of alart,we will render the Alert only when is true, so we need to use state hook:
@@ -61,6 +62,7 @@ function App() {
   return (
     <>
       <div>
+        <Form></Form>
         <ExpandableText maxChars={10}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fuga inventore a molestias dolorem ex, sint similique doloremque dignissimos quos in, esse vel quaerat voluptates culpa magni illo. Nihil eum similique ducimus obcaecati. Corporis dolorum perspiciatis nihil nesciunt quas reiciendis culpa, voluptatem quia nam! Enim illum molestiae ut temporibus mollitia exercitationem, tempore officiis! Maiores facilis nam ipsa, a et, obcaecati fuga voluptas maxime ducimus blanditiis dolore architecto aspernatur laboriosam perferendis qui quas laudantium. Excepturi, quasi blanditiis aspernatur veritatis atque architecto dolore perferendis id eligendi deleniti laudantium accusamus obcaecati unde quo vitae assumenda voluptate dolorum illo! Corrupti quas explicabo ut ullam.</ExpandableText>
         <div >
           
